@@ -610,4 +610,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - "Assets/Scenes/\u5834\u666F.unity"
-  playerPath: D:/unity/data/01/Unity2D_20210428/WEB
+  playerPath: D:/unity/data/01/Astral/unity2d_astral/WEB
