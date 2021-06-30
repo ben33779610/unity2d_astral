@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Plant
+  m_Controller: {fileID: 9100000, guid: 43d7ae7c2d921734fa1f46ac749f3156, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ab0192b93b56c5748ab7d30835f7e2f4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a5d5aae781f04140b38c3e9fea5d9b3, type: 2}
