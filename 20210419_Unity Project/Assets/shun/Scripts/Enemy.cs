@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
         enabled = false;    //這個腳本停用
         coll.enabled = false;
         gm.killenemy++;
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 1.5f);
     }
 
     /// <summary>

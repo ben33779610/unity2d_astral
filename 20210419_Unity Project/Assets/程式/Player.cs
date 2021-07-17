@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     {
         get
         {
-            return Input.GetKeyDown(KeyCode.LeftAlt);
+            return Input.GetKeyDown(KeyCode.X);
         }
     }
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     {
         get
         {
-            return Input.GetKeyDown(KeyCode.LeftControl);
+            return Input.GetKeyDown(KeyCode.Z);
         }
     }
 

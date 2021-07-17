@@ -66,13 +66,21 @@ public class GameManager : MonoBehaviour
 
     private void End()
     {
-        if (killenemy >= 3)
+        if (killenemy >= 1)
         {
+
             Endimage.SetActive(true);
-            
         }
         
 
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     private void Start()
@@ -97,6 +105,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            
             if (!IsrevUI) 
             {
                 lifestm.SetActive(true);
