@@ -4,8 +4,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;              //敵人資料
+    
     private Animator ani;               //動畫
-    public GameManager gm;
+
     //////////////////////////////////////////////////////////////// 
     private float curhp;
 
@@ -43,7 +44,6 @@ public class Enemy : MonoBehaviour
         playerLayer = 1 << 9;
         Timer = data.cd - 0.5f;
         onHurt = false;
-        gm = GameObject.FindObjectOfType<GameManager>();
     }
 
     
@@ -181,8 +181,14 @@ public class Enemy : MonoBehaviour
         rig.velocity = new Vector2(0, 0);
         enabled = false;    //這個腳本停用
         coll.enabled = false;
-        gm.killenemy++;
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 3);
+    }
+
+
+
+    private void DropItem()
+    {
+
     }
 
     /// <summary>

@@ -29,4 +29,17 @@ public class PlayerData : ScriptableObject
     public float moveForce;
     [Header("往上的力量"), Range(0, 5000)]
     public float jumpForce;
+
+    [Header("是否可交互")]
+    public bool say;
+
+    public bool SayKey
+    {
+        get
+        {
+            return Input.GetKeyDown(KeyCode.Space);
+        }
+    }
+
+
 }

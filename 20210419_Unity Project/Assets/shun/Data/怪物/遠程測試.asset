@@ -18,7 +18,7 @@ MonoBehaviour:
   atkdelay: 1
   cd: 5
   stopdis: 3
-  collisionRadius: 3
+  collisionRadius: 2.41
   radialLength: 2.37
   atkLength: 0.1
   bulletspeed: 100

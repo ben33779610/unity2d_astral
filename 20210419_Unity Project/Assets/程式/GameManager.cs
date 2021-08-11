@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.AI;   
+using UnityEngine.AI;
+using Fungus;
+
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -32,11 +36,13 @@ public class GameManager : MonoBehaviour
     public int def = 99999;
     public int maxdag = 999999999;
 
-    public GameObject Endimage;
+
     private bool IsrevUI;
 
+    public Flowchart flow_yes;
+    
 
-    public int killenemy;
+
 
 
     public bool menukey
@@ -63,41 +69,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    private void End()
-    {
-        if (killenemy >= 1)
-        {
-
-            Endimage.SetActive(true);
-        }
-        
-
-    }
-    public void Retry()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void Quit()
-    {
-        Application.Quit();
-    }
+    
 
     private void Start()
     {
         IsrevUI = false;
-        killenemy = 0;
-
-
+        
+        
     }
 
-    
+    public void GotoField()
+    {
+        
+        SceneManager.LoadScene(1);
+    }
+
+    public void ReturntoInstructor()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuestAccept()
+    {
+
+    }
 
 
     private void Update()
     {
-        End();
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             menu.SetActive(true);
@@ -105,7 +104,6 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            
             if (!IsrevUI) 
             {
                 lifestm.SetActive(true);
@@ -122,6 +120,7 @@ public class GameManager : MonoBehaviour
         {
             eqi.SetActive(true);
         }
+        
 
     }
 

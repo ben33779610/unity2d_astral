@@ -15,9 +15,10 @@ public class Player : MonoBehaviour
 
     private int A_face = 1; //預設面向右邊
 
-    public hpValueManager hpvaluemanger;
-    public mpValueManager mpvaluemanger;
+    private hpValueManager hpvaluemanger;
+    private mpValueManager mpvaluemanger;
     private int curhp;
+    public GameManager GameManager;
 
 
     // double the spin speed when true
@@ -250,28 +251,37 @@ public class Player : MonoBehaviour
         playerRigidbody2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();//取得動畫控制器
         curhp = Data.hp;   //將現在血量設定為資料內血量
-        //hpvaluemanger = GameObject.FindObjectOfType<hpValueManager>();//尋找在子物件的該類型
-        //mpvaluemanger = GameObject.FindObjectOfType<mpValueManager>();
+        hpvaluemanger = GameObject.FindObjectOfType<hpValueManager>();//尋找在子物件的該類型
+        mpvaluemanger = GameObject.FindObjectOfType<mpValueManager>();
+        GameManager = FindObjectOfType<GameManager>();
     }
-  
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        print(other.name);
+        if (other.name == "傳送門")
+        {
+            GameManager.GotoField();
+        }
+        if (other.name == "教官傳送門")
+        {
+            GameManager.ReturntoInstructor();
+        }
+    }
+
     void Update()
     {
+        
         MovementX();        //移動
         ControlSpeed();     //控制速度
         TryJump();          //跳躍
         if (AttackKey)      //攻擊
             Attack();
 
- /*       if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-
-
-            // play Bounce but start at a quarter of the way though              
-            anim.SetTrigger("攻擊觸發");
-
-
-
-        }*/
     }
+
+
+
+
 }
     

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   hp: 500
-  atk: 30
+  atk: 29
   atkdelay: 0
   cd: 2.2
   stopdis: 2
-  collisionRadius: 2.48
+  collisionRadius: 1.97
   radialLength: 3
   atkLength: 2.5
   bulletspeed: 0

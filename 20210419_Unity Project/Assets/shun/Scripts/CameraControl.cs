@@ -31,12 +31,12 @@ public class CameraControl : MonoBehaviour
 		
 		if (posP.x  > -7.6f)
 		{
-			if (posP.y > 0.4f)
+			if (posP.y > 2.4f + transform.position.y)
 			{
 				posC.y = Mathf.Clamp(posC.y, ymin, ymax);
 
 			}
-			else posP.y = 0;
+			else posP.y = transform.position.y;
 
 			posC.x = Mathf.Clamp(posC.x, xmin, xmax);   //Mathf.Clamp(夾住的值,下限,上限)
 			transform.position = Vector3.Lerp(posC, posP, 0.3f * Time.deltaTime * 5);

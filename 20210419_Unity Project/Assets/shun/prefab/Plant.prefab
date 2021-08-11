@@ -138,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b44cfdf289962614a8c58f362fd91584, type: 2}
-  gm: {fileID: 0}
   face: 0
   bullet: {fileID: 4188934032714802657, guid: 58e73499e3b76764db1d07e4f81cd135, type: 3}
 --- !u!70 &2150489740266211551
