@@ -1,6 +1,6 @@
 {
-"companyName": "ABC",
-"productName": "ASTRAL",
+"companyName": "DefaultCompany",
+"productName": "20210419_Unity Project",
 "productVersion": "1.0",
 "dataUrl": "WEB.data.unityweb",
 "wasmCodeUrl": "WEB.wasm.code.unityweb",
